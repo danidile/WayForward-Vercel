@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT = 4030;
+const PORT = 3000;
 
  
 // Set EJS as the view engine
