@@ -1,0 +1,731 @@
+/*************************************************
+**************************************************
+
+Website Name: 
+Website URL: 
+Website Author: Tabitha Turton
+Author URL: tabithaturton.com
+Copyright 2017. All Rights Reserved.*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+Color Guide
+***************/
+
+:root{
+    --main-color:#ff8557;
+    --main-color-white:#f8f2eb;
+}
+/*************************************************
+
+Type Guide
+****************/
+
+/*
+Debugging Tools
+***************
+border: 1px solid #fff;
+
+/************************************************
+
+/************************************************
+*************************************************
+0. CSS Reset ------------------------ 
+1. Universal Styles -----------------
+2. Header & Nav Styles -------------- 
+3. Main Body Styles ----------------- 
+4. Sidebar Styles ------------------- 
+5. Widget Styles --------------------
+6. Footer Styles -------------------- 
+7. Comments & Form Styles ----------- 
+8. Generic Styles ----------- 
+*************************************************
+************************************************/
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+
+  }
+  button{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    font-size: 16px;
+    border: 0px;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  /*----------------------------------------------
+  ------------------------------------------------
+  1. Universal Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  body {
+    font-size: 16px;
+  }
+  h1{
+    font-size: 5.61rem;
+    font-weight: 500;
+  }
+  h2{
+    font-size: 4.209rem;
+    font-weight: 600;
+    
+  }
+  h3{
+    font-size: 3.157rem;
+    font-weight: 600;
+    
+  }
+  h4{
+    font-size: 2.369rem;
+    font-weight: 400;
+    
+  }
+  h5{
+    font-size: 1.777rem;
+    font-weight: 400;
+  }
+  h6{
+    font-size: 1.333rem;
+    font-weight: 400;
+  }
+small{
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.orange{
+  color: #ff8557;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ul-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.menu-logo{
+    width: 200px;
+}
+.menu-container{
+    position: relative;
+    z-index: 10;
+    height: 8vh;
+    align-items: center;
+    vertical-align: middle;
+    font-weight: 400;
+    padding: 20px 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    color: black;
+}
+.menu-img-container{
+    flex-grow: 1;
+}
+.menu-list-container{
+    flex-grow: 1;
+}
+
+.menu-button-1{
+    font-weight: 500;
+    padding: 9px 25px;
+    background-color: var(--main-color-white);
+    color: var(--main-color);
+}
+
+
+.hero-section{
+    border-radius: 12px;
+    height: 90vh;
+    margin: 0px 30px 2vh 30px;
+    padding: 50px;
+    background-image: url('/Asset/Cover.jpg');
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+    
+    color: white;
+}
+.numbers-section{
+    padding: 10vh 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbers-container{
+    margin-top: 10vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    min-width: 230px;
+    width: 250px;
+    flex-grow: 1;
+    text-align: center;
+    
+    
+}
+
+.card-numbers img{
+    overflow: visible;
+    width: 70px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--main-color-white);
+    border-radius: 50%;
+    
+}
+
+.button-big{
+    margin-top: 10vh;
+    color: var(--main-color-white);
+    background-color: var(--main-color);
+    padding: 12px 37px;
+    border-radius: 50px;
+    animation: 1s ease-in 1s;
+    transition: 0.3s;
+}
+
+.button-big h6{
+    font-weight: 500;
+
+}
+.how-we-work-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hww-container{
+    margin-top: 10vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slider-hww{
+    width: 128vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+
+    transition: 0.3s;
+
+
+  }
+
+
+.hww-slide{
+
+    border-radius: 12px;
+    color: white;
+    background-color: black;
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 450px;
+    width: 30vw;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    animation: 3s linear 1s infinite running slidein;
+    transition-duration: 300ms;
+    left: 0px;
+}
+.hww-slide:hover{
+  scale: 1.02;
+}
+.learn-more{
+    
+    display: flex;
+    flex-direction: row;
+    color: var(--main-color);
+}
+.learn-more p{
+    margin-right: 10px;
+}
+
+
+
+#hww-slide-1{
+background-image: url('/Asset/Slider/slider-1.jpg');
+}
+#hww-slide-2{
+    background-image: url('/Asset/Slider/slider-2.jpg');
+}
+#hww-slide-3{
+    background-image: url('/Asset/Slider/slider-3.jpg');
+}
+#hww-slide-4{
+    background-image: url('/Asset/Slider/slider-4.jpg');
+}
+
+
+.data-section{
+  margin: 20vh auto;
+width: 80vw;
+}
+
+.data-li h3{
+  font-weight: 300;
+}
+.data-section h2{
+  list-style: none;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+.data-li{
+  list-style: none;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+
+.cta-section{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  overflow: hidden;
+  height: 500px;
+  width: 98vw;
+  margin: 1vw auto;
+  position: relative;
+  border-radius: 30px;
+  color: white;
+}
+
+.cta-image-bg{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  z-index: 1;
+}
+
+.cta-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+.cta-left{
+  width: 50%;
+  padding: 5vh;
+  text-align: right;
+  align-self: center;
+}
+.cta-right{
+  border-radius: 24px;
+  display: inline-block;
+  padding: 40px 15px;
+  align-self: center;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.6px);
+-webkit-backdrop-filter: blur(7.6px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-3{
+  margin: 0px 15px;
+  position: relative;
+  font-weight: 500;
+  padding: 20px 45px;
+  border-radius: 12px;
+  background-color: var(--main-color-white);
+  color: black;
+}
+
+footer{
+  background: linear-gradient(#ffffff, #dedede);
+  padding: 1vw;
+  height: 600px;
+
+}
+.footer-container{
+  margin: 40px auto;
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.footer-column1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.footer-column2{
+  list-style: none;
+  height: 100%;
+  width: 30%;
+}
+.footer-column3{
+  height: 100%;
+  width: 30%;
+}
+.footer-logo{
+  width: 200px;
+}
+.footer-column2 b{
+  font-weight: 600;
+  font-size: 16px;
+}
+.footer-menu-li{
+  margin: 30px 0px;
+  list-style: none;
+  text-align: left;
+}
+.footer-menu-li li{
+  margin: 5px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rst-hero h2{
+  position: relative;
+  z-index: 9;
+}
+
+.rst-hero-container{
+  color: white;
+  width: 98vw;
+  height: 50vh;
+  margin: 1vw;
+  border-radius: 12px;
+  position: relative;
+  overflow:hidden;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vh;
+
+}
+
+.rst-hero-image{
+  border-radius: 12px;
+  position: center; /* Center the image */
+  size: cover;
+  height: 100%;
+
+position: absolute;
+top: 0px;
+left: 0px;
+margin: 0px;
+z-index: 1;
+opacity: 0.75;
+
+
+}
+.rst-hero-content{
+  position: relative;
+  z-index: 3;
+  width: 1300px;
+}
+.rst-hero-content p{
+  width: 1000px;
+}
+.rst-hero-content h6{
+  margin-top: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+  width: 1000px;
+}
+
+.button-1{
+  position: relative;
+  font-weight: 500;
+  padding: 9px 25px;
+  margin-top: 10px;
+  background-color: var(--main-color);
+  color: var(--main-color-white);
+}
+.fc-section{
+  text-align: center;
+  margin: auto;
+  border-radius: 12px;
+  width: 98vw;
+  padding: 7vh;
+
+
+}
+
+.fc-content h2{
+  margin-bottom: 30px;
+}
+
+.fc-content li{
+  
+  line-height: 1.5em;
+  text-align: center;
+  list-style: none;
+  position: relative;
+	outline: none !important;
+	transition: 0.2s;
+
+}
+
+.fc-content{
+
+  padding-left: 1vw;
+
+}
+
+
+
+
+
+.partner-hero-section{
+  height: 70vh;
+  margin: 0px 30px 2vh 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.circle-1{
+  border-radius: 50%;
+  border: 2px dotted hsl(16, 75%, 80%); 
+  background-color: #ff845710;
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  top: 0vh;
+  left: -20vh;
+  z-index: 0;
+}
+.circle-2{
+  border-radius: 50%;
+  border: 2px dotted hsl(16, 75%, 80%); 
+  background-color: #ff845710;
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  top: -0vh;
+
+  left: 30vw;
+  z-index: 0;
+
+}
+.partner-hero-content{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 3;
+}
+.partner-hero-text{
+  align-self: center;
+}
+.partner-hero-img{
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  margin-left: 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+
+
+/*BEGIN rotaion animation*/
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 15s linear infinite;
+  -moz-animation: rotating 15s linear infinite;
+  -ms-animation: rotating 15s linear infinite;
+  -o-animation: rotating 15s linear infinite;
+  animation: rotating 15s linear infinite;
+}
+/*END rotaion animation*/
+
+
+
+
+
+
+
+
+
+
+.wpw-section{
+  border-radius: 24px 24px 0px 0px ;
+  position: relative;
+  width: 98vw;
+  margin: 0px auto;
+  padding: 5vh;
+  z-index: 8;
+  background-color: #ffffffc2;
+  color: black;
+}
+.wpw-section h2{
+  font-weight: 400;
+}
+.wpw-card{
+  border-top: 2px solid #111111;
+  padding: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.wpw-card p{
+  font-weight: 300;
+  width: 330px;
+text-align: justify;
+}
+.wpw-card h5{
+  font-weight: 600;
+}
+.wpw-card-image{
+  border-radius: 12px;
+  margin-left: 20vw;
+  margin-right: 30px;
+  width: 250px;
+  height: 160px;
+  object-position: bottom; /* Center the image */
+  object-fit: cover;
+}
+.h2-wpw-card{
+  width: 100px;
+}
+
+
+
+  /*----------------------------------------------
+  ------------------------------------------------
+  2. Header & Nav Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  3. Main Body Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  4. Sidebar Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  5. Widget Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  6. Footer Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  7. Comments & Form Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
+  
+  /*----------------------------------------------
+  ------------------------------------------------
+  8. Generic Styles
+  ------------------------------------------------
+  ----------------------------------------------*/
